@@ -1,0 +1,6 @@
+UPDATE public."users" SET
+    "phone" = '{{update_user_form.formData.phone}}',
+    "email" = '{{update_user_form.formData.email}}',
+    "country" = '{{update_user_form.formData.country}}',
+    "name" = '{{update_user_form.formData.name}}'
+  WHERE id = {{users_table.selectedRow.id}}; -- Specify a valid condition here. Removing the condition may update every row in the table!
